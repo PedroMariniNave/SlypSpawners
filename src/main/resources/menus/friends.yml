@@ -1,0 +1,33 @@
+Inventory:
+  title: "Spawner - Amigos"
+  size: 45
+  friend-slots: 1,2,3,4,5,6,7,10,11,12,13,14,15,16
+  items:
+    1:
+      action: ADD_FRIEND
+      type: MAGMA_CREAM
+      glow: true
+      name: '&aAdicionar Amigo'
+      slot: 40
+
+Item:
+  type: SKULL_ITEM
+  owner: '{friend}'
+  name: '&a{friend}'
+  lore:
+    - '&7Clique para remover esse amigo!'
+
+Next-Page:
+  type: ARROW
+  name: '&aPróxima Página'
+  slot: 26
+
+Previous-Page:
+  type: ARROW
+  name: '&cPágina Anterior'
+  slot: 18
+
+Empty:
+  type: WEB
+  name: '&cVazio'
+  slot: 22

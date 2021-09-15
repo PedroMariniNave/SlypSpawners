@@ -1,0 +1,6 @@
+name: ${project.artifactId}
+description: ${project.description}
+author: zPedroo_
+version: 1.0
+main: com.zpedroo.slypspawners.SlypSpawners
+depend: [HolographicDisplays, WorldGuard]

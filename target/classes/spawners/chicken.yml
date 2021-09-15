@@ -1,0 +1,78 @@
+Spawner-Hologram:
+  - '&f&lSPAWNER DE GALINHA'
+  - ''
+  - '&7Dono: &f{owner}'
+  - '&7Stack: &f{stack}'
+  - '&7Máx: &f{max_stack}'
+  - ''
+  - '&7Status: {status}'
+
+Spawner-Settings:
+  spawner-block: 'MOB_SPAWNER'
+  entity: CHICKEN
+  entity-name: '&aGalinha &7(&fx{stack}&7)'
+  permission: 'spawner.chicken' # só remover caso não queira
+  permission-message: '&cVocê precisa ser um VIP para usar esse spawner!'
+  spawn-delay: 200 # em ticks
+  max-stack: 10000000000000 # 0 = sem limite
+  item:
+    type: SKULL_ITEM
+    owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ==
+    name: '&7Spawner de &f&lGALINHA &7(&fx{amount}&7)'
+    lore:
+      - '&7Coloque no seu terreno para'
+      - '&7gerar galinhas!'
+  drops:
+    1:
+      display-name: '&fAsa de urubu pena de galinha &7(x&f{amount}&7)'
+      type: FEATHER
+      name: '&fPENA DE GALINHA'
+      lore:
+        - '&7Venda para ganhar dinheiro!'
+  head-drop:
+    # se o stack estiver desativado, significa que vão dropar várias heads
+    # por não ser tudo stackado em um item só, portanto o plugin vai criar
+    # um stack desses itens para evitar lag
+    display-name: '&fCabeça de Galinha &7(&fx{amount}&7)'
+    chance: 10
+    percentage: 10
+    stack: false
+    item:
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ==
+      name: '&fCabeça de Galinha' # {amount} pode ser usado para pegar a quantia stackada em 1 item só
+      lore:
+        - '&7Troque por itens raros!'
+
+Spawner-Menu:
+  title: "Spawner - Menu"
+  size: 45
+  items:
+    1:
+      type: SKULL_ITEM
+      owner: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTYzODQ2OWE1OTljZWVmNzIwNzUzNzYwMzI0OGE5YWIxMWZmNTkxZmQzNzhiZWE0NzM1YjM0NmE3ZmFlODkzIn19fQ==
+      name: '&fSpawner de Galinha'
+      lore:
+        - "&7Informações:"
+        - ""
+        - "&7Dono: &f{owner}"
+        - "&7Stack: &f{stack}"
+        - "&7Tempo de spawn: &f{spawn_time} segundos"
+        - "&7Boost: &f-{boost} segundos"
+      slot: 4
+    2:
+      action: SWITCH
+      type: DIAMOND
+      name: '&aLigar/Desligar'
+      lore:
+        - "&7Clique para ligar ou"
+        - "&7desligar o spawner!"
+      slot: 21
+    3:
+      action: FRIENDS
+      type: EMERALD
+      name: '&aAmigos'
+      lore:
+        - "&7Clique para gerenciar"
+        - "&7os amigos com permissão!"
+      slot: 23

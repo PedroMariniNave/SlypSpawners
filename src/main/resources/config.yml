@@ -1,0 +1,76 @@
+MySQL:
+  enabled: false
+  host: 'localhost'
+  database: 'db'
+  username: 'user'
+  password: 'pass'
+  port: 3306
+
+Settings:
+  # A cada quantos segundos os
+  # spawners serão salvos na DB
+  save-interval: 600
+  # Quantos ticks máximos cada
+  # spawner vai suportar de booster
+  #
+  # Exemplo: o mob spawna a cada 500 ticks
+  # e o jogador aplicou 200 ticks de booster,
+  # com isso o mob vai spawnar a cada 300 ticks
+  #
+  # Cuidado na hora de criar esses valores!
+  max-booster: 200
+  # Qual raio em blocos que os
+  # os spawners e mobs irão stackar
+  stack-radius: 5
+  # Altura do holograma do spawner
+  hologram-height: 3.75
+  # Comando principal
+  command: spawner
+  # Aliases do comando
+  aliases: []
+  # Subcomandos
+  keys:
+    give: 'GIVE'
+    booster: 'BOOSTER'
+
+Messages:
+  enabled: '&aAtivado'
+  disabled: '&cDesativado'
+  help:
+    - '&cComandos disponíveis:'
+    - ''
+    - ' &c/spawner give <jogador> <tipo> <quantia>.'
+    - ' &c/spawner booster <jogador> <ticks> <quantia>.'
+  invalid-spawner: '&cO spawner informado é inválido!'
+  invalid-amount: '&cA quantia informada é inválida!'
+  offline-player: '&cEsse jogador está offline!'
+  boost-refound: '&cVocê recebeu -{time_formatted} segundos de boost porque esse spawner atingiu o limite de boosts!'
+  near-spawner: '&cHá um spawner muito próximo a esse local! Afaste-se e tente novamente.'
+  only-owner: '&cApenas o dono desse spawner pode fazer isso!'
+  has-permission: '&cEsse jogador já possui permissão nesse spawner!'
+  need-permission: '&cVocê não possui permissão para interagir com esse spawner!'
+  add-friend:
+    - '&7Digite no chat o nome do jogador!'
+    - '&7Lembre-se que ele precisa estar online.'
+
+# {time} = tempo em ticks
+# {time_formatted} = tempo formatado em segundos
+Spawner-Booster:
+    type: EMERALD
+    glow: true
+    name: '&a-{time_formatted} segundo de spawn'
+    lore:
+      - '&7Aplique em um spawner!'
+
+NumberFormatter:
+  - "k"
+  - "M"
+  - "B"
+  - "T"
+  - "Q"
+  - "QQ"
+  - "S"
+  - "SS"
+  - "O"
+  - "N"
+  - "D"
